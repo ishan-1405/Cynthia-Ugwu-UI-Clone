@@ -1,0 +1,300 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "General Sans";
+}
+
+html body {
+    width: 100%;
+    height: 100%;
+}
+
+#minicircle {
+    transition: all cubic-bezier(0.075, 0.82, 0.165, 1)0.8s;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    z-index: 99999999;
+    border-radius: 50%;
+    background-color: #ffffff;
+}
+
+.bounding {
+    width: fit-content;
+    overflow: hidden;
+}
+
+.bounding .boundingelem {
+    transform: translateY(100%);
+
+}
+
+#main {
+    width: 100%;
+    background-color: black;
+}
+
+
+#hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    color: white;
+}
+
+#nav {
+    width: 100%;
+    padding: 20px 40px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+#heading {
+    margin-top: 90px;
+}
+
+#heading h1 {
+    font-size: 10vw;
+    font-weight: 900;
+    font-family: "General Sans";
+    line-height: 1;
+    opacity: .6;
+    margin-left: 30px;
+}
+
+#heading #secondh1 {
+    margin-left: 230px;
+}
+
+.blocktext {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.blocktext h5 {
+    text-align: right;
+}
+
+#chhotiheadings {
+    margin-top: 130px;
+    padding-right: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+#chhotiheadings h5 {
+    text-transform: uppercase;
+    text-align: right;
+    margin-top: .5vw;
+    font-size: 1vw;
+}
+
+#herofooter {
+    position: absolute;
+    width: 100%;
+    bottom: 3.7%;
+    padding: 0 2vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#herofooter a {
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+#herofooter #iconset {
+    display: flex;
+    gap: 5px;
+}
+
+#herofooter .circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    background-color: #888;
+    border-radius: 50%;
+
+}
+
+#second {
+    padding-right: 10vw;
+    padding-top: 200px;
+    padding-left: 40px;
+    background-color: black;
+    width: 100%;
+    height: 195vh;
+    color: white;
+}
+
+.elem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border-top: 1px solid gray;
+    padding: 3vw 3vw;
+    padding-right: 0;
+    position: relative;
+}
+
+.elem h1 {
+    text-transform: uppercase;
+    font-size: 7vw;
+    opacity: .6;
+}
+
+.elem h5 {
+    font-size: 16px;
+}
+
+.elemlast {
+    border-bottom: 1px solid gray;
+}
+
+.elem img {
+    opacity: 0;
+    height: 140%;
+    position: absolute;
+    top: 0;   /* ✅ set a starting point */
+    left: 0;
+    pointer-events: none; /* so it doesn’t block mouse events */
+    transform: translate(-50%, -50%); /* centers image on cursor */
+    z-index: 99;
+}
+
+#work8 {
+    width: 150px;
+    padding: 8px 0;
+    margin-top: 50px;
+    text-align: center;
+    border: 1px solid white;
+    border-radius: 100px;
+}
+
+#work8 a {
+    color: white;
+    text-decoration: none;
+}
+
+#about {
+    display: flex;
+    align-items: flex-start;
+    gap: 90px;
+    color: white;
+    padding: 10vw 5vw;
+    padding-left: 35vw;
+    width: 100%;
+    background-color: black;
+}
+
+#textabout {
+    width: 30rem;
+}
+
+#textabout h5 {
+    opacity: 0.6;
+    margin-bottom: 10px;
+    font-size: large;
+}
+
+#textabout p {
+    line-height: 1.7;
+    margin-bottom: 30px;
+    font-size: large;
+}
+
+#about img {
+    width: 250px;
+}
+
+#textabout a {
+    padding: 12px 22px;
+    border: 1px solid white;
+    border-radius: 100px;
+    color: white;
+    text-decoration: none;
+    font-size: large;
+}
+
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+#slidecontainer {
+    background-color: black;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+#slide {
+    display: flex;
+    animation: 35s slide infinite linear;
+    border-top: .7px solid white;
+    border-bottom: .7px solid white;
+}
+
+.slidelogos {
+    display: flex;
+}
+
+.slidelogos img {
+    height: 60px;
+    margin: 40px 60px;
+}
+
+#footer {
+    height: 35vh;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    padding: 40px 60px;
+    color: white;
+    background-color: black;
+    font-size: large;
+    font-weight: 500;
+}
+
+#footerleft {
+    display: flex;
+    gap: 60px;
+    font-size: large;
+}
+
+#footerright {
+    display: flex;
+    gap: 60px;
+}
+
+#footer a {
+    font-weight: 500;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+}
